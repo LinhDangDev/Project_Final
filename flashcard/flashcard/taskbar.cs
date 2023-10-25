@@ -58,6 +58,7 @@ namespace flashcard
             account.ShowDialog();
         }
 
+        }
         private void icon_home(ToolStrip menu)
         {
             ToolStripButton iconHome = new ToolStripButton();
@@ -74,7 +75,15 @@ namespace flashcard
             iconLibrary.Name = "iconLibrary";
             iconLibrary.Text = "Library";
             common_menustrip(iconLibrary, menu);
+            iconLibrary.Click += new EventHandler(iconLibrary_Click);
         }
+
+        private void iconLibrary_Click(object sender, EventArgs e)
+        {
+            frm_library frm_Library = new frm_library();
+            frm_Library.ShowDialog();
+        }
+
         private void icon_add(ToolStrip menu)
         {
             ToolStripButton iconAdd = new ToolStripButton();
@@ -118,4 +127,3 @@ namespace flashcard
             common_menustrip(iconHelp, menu);
         }
     }
-}

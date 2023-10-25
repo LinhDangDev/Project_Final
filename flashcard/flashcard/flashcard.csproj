@@ -57,6 +57,11 @@
     </Compile>
     <Compile Include="frm_Register.Designer.cs">
       <DependentUpon>frm_Register.cs</DependentUpon>
+    <Compile Include="frm_library.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_library.Designer.cs">
+      <DependentUpon>frm_library.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Review.cs">
       <SubType>Form</SubType>
@@ -98,6 +103,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Account.resx">
       <DependentUpon>frm_Account.cs</DependentUpon>
+    <EmbeddedResource Include="frm_library.resx">
+      <DependentUpon>frm_library.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
@@ -110,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Sign_in.resx">
       <DependentUpon>frm_Sign_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Review.resx">
+      <DependentUpon>frm_Review.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

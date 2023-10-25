@@ -61,5 +61,10 @@ namespace flashcard
             resize_form();
             getMenu();
         }
+
+        private void progressBar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
