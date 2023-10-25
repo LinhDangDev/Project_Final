@@ -19,6 +19,8 @@ namespace flashcard
             icon_review(tool);
             icon_export(tool);
             icon_About(tool);
+            icon_export(tool);
+            icon_Help(tool); // conflic
         }
         private void common_menustrip(ToolStripButton tool, ToolStrip menu)
         {
@@ -27,7 +29,7 @@ namespace flashcard
             tool.ImageTransparentColor = Color.Magenta;
             tool.Size = new Size(96, 96);
             tool.ImageScaling = ToolStripItemImageScaling.SizeToFit;
-            tool.Font = new Font("Consolas", 17, FontStyle.Bold);
+            tool.Font = new Font("Comfortaa", 17, FontStyle.Bold);
             tool.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             tool.TextImageRelation = TextImageRelation.ImageAboveText;
             menu.Items.Add(tool);
@@ -84,6 +86,7 @@ namespace flashcard
             frm_Library.ShowDialog();
         }
 
+        }
         private void icon_add(ToolStrip menu)
         {
             ToolStripButton iconAdd = new ToolStripButton();
@@ -106,24 +109,43 @@ namespace flashcard
         {
             frm_Review frm = new frm_Review();
             frm.ShowDialog();
+            iconAdd.Click += new EventHandler(IconAdd_Click);
+        }
+
+        private void IconAdd_Click(object sender, EventArgs e)
+        {
+            frm_add form = new frm_add();
+            form.ShowDialog();
         }
 
         private void icon_export(ToolStrip menu)
         {
             ToolStripButton iconExport = new ToolStripButton();
             iconExport.Image = global::flashcard.Properties.Resources.export__1_;
-            iconExport.Margin = new System.Windows.Forms.Padding(0, 230, 0, 0);
+            iconExport.Margin = new System.Windows.Forms.Padding(0, 300, 0, 0);
             iconExport.Name = "iconExport";
             iconExport.Text = "Export";
             common_menustrip(iconExport, menu);
         }
-        private void icon_About(ToolStrip menu)
+
+        private void icon_Help(ToolStrip menu)
         {
             ToolStripButton iconHelp = new ToolStripButton();
             iconHelp.Image = global::flashcard.Properties.Resources.question;
-            iconHelp.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            iconHelp.Name = "iconAbout";
-            iconHelp.Text = "About";
+            iconHelp.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);    
+            iconHelp.Name = "iconHelp";
+            iconHelp.Text = "Help";
             common_menustrip(iconHelp, menu);
+            iconHelp.Click += new EventHandler(IconHelp_Click);
+        }
+
+        private void IconHelp_Click(object sender, EventArgs e)
+        {
+            frm_about form = new frm_about();
+            form.ShowDialog();
         }
     }
+}
+        
+    
+

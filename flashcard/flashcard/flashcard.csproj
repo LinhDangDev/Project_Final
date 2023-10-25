@@ -87,6 +87,28 @@
     <Compile Include="RJ_TextBox\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_about.Designer.cs">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add.Designer.cs">
+      <DependentUpon>frm_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.Designer.cs" />
     <Compile Include="taskbar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +127,11 @@
       <DependentUpon>frm_Account.cs</DependentUpon>
     <EmbeddedResource Include="frm_library.resx">
       <DependentUpon>frm_library.cs</DependentUpon>
+    <EmbeddedResource Include="frm_about.resx">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add.resx">
+      <DependentUpon>frm_add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
@@ -132,6 +159,7 @@
     <EmbeddedResource Include="RJ_TextBox\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RJTextBox.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -187,5 +215,10 @@
     <None Include="Resources\home %282%29.png" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\mem1.png" />
+    <Content Include="Resources\mem2.png" />
+    <Content Include="Resources\mem3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

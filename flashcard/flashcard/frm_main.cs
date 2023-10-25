@@ -32,6 +32,7 @@ namespace flashcard
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            menu.BackColor = lightpink;
             resize_form();
             TaskBar(menu);
             taskbar_Level();
